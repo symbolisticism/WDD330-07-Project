@@ -21,3 +21,4 @@ Use this as a starting point to complete the WDD 330 team activity: the SleepOut
 
 ## Useful Information
 - URL for the site: https://enchanting-caramel-17fd19.netlify.app/
+- URL for Trello Board: https://trello.com/b/pfThAej6/wdd330-trello-board-team-7
