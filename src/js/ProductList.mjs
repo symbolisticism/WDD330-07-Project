@@ -1,17 +1,15 @@
-<<<<<<< HEAD
-=======
 import { renderListWithTemplate } from "./utils.mjs";
 
 function productCardTemplate(product) {
   return `<li class="product-card">
-  <a href="product_pages/index.html?product=${product.Id}">
+  <a href="/product_pages/index.html?product=${product.Id}">
   <img
-    src="${product.Image}"
+    src="${product.Images.PrimaryMedium}"
     alt="Image of ${product.Name}"
   />
   <h3 class="card__brand">${product.Brand.Name}</h3>
   <h2 class="card__name">${product.Name}</h2>
-  <p class="product-card__price">${product.FinalPrice}</p></a>
+  <p class="product-card__price">$${product.FinalPrice}</p></a>
 </li>`;
 }
 
@@ -25,9 +23,11 @@ export default class ProductList {
   }
   async init() {
     // our dataSource will return a Promise...so we can use await to resolve it.
-    const list = await this.dataSource.getData();
+    const list = await this.dataSource.getData(this.category);
     // render the list
     this.renderList(list);
+    //set the title to the current category
+    document.querySelector(".title").innerHTML = this.category;
   }
   // render after doing the first stretch
   renderList(list) {
@@ -40,4 +40,3 @@ export default class ProductList {
   //   this.listElement.insertAdjacentHTML("afterbegin", htmlStrings.join(""));
   // }
 }
->>>>>>> 7088e1a35ba14f3c72a519169e8e4653cae57800
