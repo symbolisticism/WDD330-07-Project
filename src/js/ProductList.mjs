@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { renderListWithTemplate } from "./utils.mjs";
 
 function productCardTemplate(product) {
@@ -40,4 +38,3 @@ export default class ProductList {
   //   this.listElement.insertAdjacentHTML("afterbegin", htmlStrings.join(""));
   // }
 }
->>>>>>> 7088e1a35ba14f3c72a519169e8e4653cae57800
